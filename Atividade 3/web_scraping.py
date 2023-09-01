@@ -31,7 +31,7 @@ try:
     for movie in movies:
 
         # Extract movie name
-        name = movie.find('a', class_="ipc-title-link-wrapper").h3.text
+        name = movie.find('a', class_="ipc-title-link-wrapper").h3.text.split('.')[1]
 
         # Extract movie rank
         rank = movie.find('a', class_="ipc-title-link-wrapper").get_text(strip=True).split('.')[0]
